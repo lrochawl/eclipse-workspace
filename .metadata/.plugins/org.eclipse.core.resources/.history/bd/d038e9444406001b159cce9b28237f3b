@@ -1,0 +1,27 @@
+import java.util.Locale;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		double x = 10.167;
+		String b = "Boa tarde";
+		char v = 'i';
+		
+		if(x == 10.167) {
+			 v = 'b';
+		System.out.println("bom dia");
+	}else {
+		 v = 't';
+		System.out.println(b);
+	}
+		if(x > 10 && v == 'b') {
+			System.out.printf("%.2f%n", x);
+		}else if(x > 10 || v == 't') {
+			System.out.printf("%.3f%n", x);
+		}
+	
+	}
+
+}

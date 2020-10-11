@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+	// Exercicio 2
+	
+	public static void main(String[] args) {
+		
+		double x,y;
+		
+		Scanner sn = new Scanner(System.in);
+		
+		System.out.println(" Digite as coodenadas X e Y do plano cartesiano");
+		x = sn.nextDouble();
+		y = sn.nextDouble();
+		
+		while(x != 0 || y != 0) {
+			System.out.println(" Digite novas coodenadas X e Y do plano cartesiano");
+		}
+	}
+	
+	// Exercicio 1
+	/*
+	public static void main(String[] args) {
+		
+		int senha;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite sua senha");
+		
+		senha = sc.nextInt();
+		
+		while(senha != 2002) {
+			System.out.println("Senha Invalida");
+			System.out.println("Digite a senha novamente");
+			senha = sc.nextInt();
+		}
+		
+		System.out.println("Acesso permitido");
+	
+		sc.close();
+	}
+*/
+}

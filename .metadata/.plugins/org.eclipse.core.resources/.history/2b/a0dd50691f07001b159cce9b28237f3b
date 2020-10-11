@@ -1,0 +1,101 @@
+import java.util.Scanner;
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int N1, N2;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite dois números inteiros em ordem decrescente");
+		N1 = sc.nextInt();
+		N2 = sc.nextInt();
+		
+		if(N1 < N2) {
+			if(N2 % N1 == 0) {
+				System.out.println("São multiplos");
+			}else {
+				System.out.println("Não são multiplos");
+			}
+		
+		}else {
+			if(N1 % N2 == 0) {
+				System.out.println("São multiplos");
+			}else {
+				System.out.println("Não são multiplos");
+			}
+		}
+	}
+
+	//----------------- Exercicio 2
+	/*
+	public static void main(String[] args) {
+		
+		int n;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite um número inteiro");
+		n = sc.nextInt();
+		
+		if(n % 2 == 0) {
+			System.out.println("PAR");
+		}else {
+			System.out.println("IMPAR");
+		}
+		
+	}
+	*/
+	
+	
+	//----------------- Exercicio 1
+	
+	/*
+	public static void main(String[] args) {
+		int n;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite um numero inteiro: ");
+		n = sc.nextInt();
+		
+		if(n < 0) {
+			System.out.println("NEGATIVO");
+		}else if(n > 0) {
+			System.out.println("NÃO NEGATIVO");
+		}else {
+			System.out.println("NEUTRO");
+		}
+		
+		sc.close();
+	}
+	*/
+	
+	
+	//----------------------------- Exercicio youtube
+	/*
+	 * 
+	 * import java.util.Locale;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double nota1, nota2, total;
+		
+		Locale.setDefault(Locale.US);
+		Scanner  sc = new Scanner(System.in);
+				
+		System.out.println("Primeira nota: ");
+		nota1 = sc.nextDouble();
+		nota2 = sc.nextDouble();
+		
+		total = nota1 + nota2;
+		
+		if(total < 60.00) {
+			System.out.printf("NOTA FINAL = %.1f %nREPROVADO", total);
+		}else {
+			System.out.printf("NOTA FINAL = %.1f", total);
+		}
+	}
+*/
+}

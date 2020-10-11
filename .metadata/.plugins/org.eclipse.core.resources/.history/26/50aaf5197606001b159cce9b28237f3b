@@ -1,0 +1,61 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+
+		Scanner sc = new Scanner(System.in);
+		/*
+		 double largura, comprimento, valor, resultValor, tamanho;
+		System.out.println("Informe a largura e comprimento do terreno em (m) ");
+		largura = sc.nextDouble();
+		comprimento = sc.nextDouble();
+		System.out.println("Informe a o valor cobrado por metro (R$) ");
+		valor = sc.nextDouble();
+		tamanho = largura * comprimento;
+		resultValor = tamanho * valor;
+		System.out.printf("A area do terreno é de %.2f e o valor total do terreno é de R$ %.2f %n %n", tamanho,
+				resultValor);
+		
+		//------------------------------ exercicio 1-------------------------------------
+		
+		int n1, n2, n3, n4, n5, n6, r1, r2,r3;
+		
+		System.out.println("Informe dois numeros:");
+		n1 = sc.nextInt();
+		n2 = sc.nextInt();
+		System.out.println("Pouco, informe mais dois números");
+		n3 = sc.nextInt();
+		n4 = sc.nextInt();
+		System.out.println("Ta pegando leve, informe mais dois");
+		n5 = sc.nextInt();
+		n6 = sc.nextInt();
+		
+		r1 = n1 + n2;
+		r2 = n3 + n4;
+		r3 = n5 + n6;
+		
+		System.out.println("-------------- Saida ------------------");
+		System.out.printf("SOMA = %d %n", r1);
+		System.out.printf("SOMA = %d %n", r2);
+		System.out.printf("SOMA = %d %n %n", r3);*/
+		
+		//-----------------------------Exerciocio 2 -------------------------------
+		Locale.setDefault(Locale.US);
+		double pi, raio, area; 
+		pi = Math.PI;
+		System.out.println("Informe o Raio deste circulo que eu calcularei a area");
+		raio = sc.nextDouble();
+		area = pi * Math.pow(raio, 2);
+		System.out.println("PI = " + pi);
+		System.out.printf("A = %.4f", area);
+		sc.close();
+
+	}
+
+}

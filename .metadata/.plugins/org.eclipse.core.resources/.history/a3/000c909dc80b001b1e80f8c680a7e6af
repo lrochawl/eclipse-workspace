@@ -1,0 +1,6 @@
+package schoolCadastro;
+
+public class Student {
+	double nota1, nota2;
+	
+}

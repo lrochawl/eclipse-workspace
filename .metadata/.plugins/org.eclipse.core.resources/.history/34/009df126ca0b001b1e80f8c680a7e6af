@@ -1,0 +1,11 @@
+package schoolCadastro;
+
+public class Student {
+	public double grade;
+	public String name;
+	
+	public double somaNota(double grade) {
+		return this.grade += this.grade;
+	}
+	
+}

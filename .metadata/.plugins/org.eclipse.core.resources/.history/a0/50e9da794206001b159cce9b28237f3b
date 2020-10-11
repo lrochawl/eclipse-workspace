@@ -1,0 +1,20 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double x = 10.1677309;
+		String b = "Boa tarde";
+		
+		if(x == 10.167) {
+		System.out.println("bom dia");
+	}else {
+		System.out.println(b);
+	}
+		if(x > 10) {
+			System.out.printf("%.3f%n", x);
+		}
+	
+	}
+
+}

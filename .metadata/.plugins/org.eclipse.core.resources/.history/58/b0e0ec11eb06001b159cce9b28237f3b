@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double nota1, nota2, total;
+		
+		Locale.setDefault(Locale.US);
+		Scanner  sc = new Scanner(System.in);
+				
+		System.out.println("Primeira nota: ");
+		nota1 = sc.nextDouble();
+		nota2 = sc.nextDouble();
+		
+		total = nota1 + nota2;
+		
+		if(total < 60.00) {
+			System.out.printf("NOTA FINAL = %.1f %nREPROVADO", total);
+		}else {
+			System.out.printf("NOTA FINAL = %.1f", total);
+		}
+	}
+
+}
