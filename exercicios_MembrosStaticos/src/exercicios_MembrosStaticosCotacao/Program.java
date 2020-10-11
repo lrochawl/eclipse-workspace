@@ -18,8 +18,9 @@ public class Program {
 		System.out.println("How many dollars will be  bought? ");
 		double quantity = sc.nextDouble();
 		
-		double real = Calc.covertDolar(cotar, quantity);
+		double real = dolar.covertDolar(cotar, quantity);
 		
+		System.out.println("Amount to be paid in reais = " + real);
 		sc.close();
 	}
 
