@@ -25,11 +25,13 @@ public class caixaEletronico {
 			System.out.print("\nQual será o valor do deposito? R$ ");
 			double deposito = sc.nextDouble();
 			conta = new CadastraConta(name, deposito);
+			System.out.println(conta);
 			
 		}else{
 			System.out.print("\nVocê optou por não realizar o deposito inicial neste momento");
 			System.out.print("\nAlguns serviços estarão indisponiveis até a realização do primeiro deposito");
 			conta = new CadastraConta(name);
+			conta.setMensagem(conta.toString());
 		}
 		
 	
@@ -37,28 +39,28 @@ public class caixaEletronico {
 		String opcao = sc.next();
 		
 		if(opcao.equals("sim")) {
-			conta.setMensagem("\nDigite 1 para deposíto e 2 para saque: ");
+			conta.setMensagem("\n1 para deposíto\n2 para saque\n3 para alterações cadastrais\n4 para finalizar\nSlecione uma opção: ");
 			int op = sc.nextInt();
 			while(op > 0 && op < 4) {
 				switch(op) {
 					case 1:
 						conta.setMensagem("\nOpção 1: %nOpção deposito selecionada\n");
-						conta.setMensagem("Informe o valor do deposito: ");
+						conta.setMensagem("Informe o valor do deposito: R$ ");
 						conta.setDeposito(sc.nextInt());
 						conta.setMensagem("\nSALDO ATUAL: R$ " + String.format("%.2f", conta.getSaldo()));
 						conta.setMensagem("\nE agora qual o proximo passo? \n");
 						conta.setMensagem("\nFINALIZAR ou realizar outra OPERAÇÂO? \n");
-						conta.setMensagem("\nDigite o numero da operação ou 4 para finalizar: ");
+						conta.setMensagem("\n1 para deposíto\n2 para saque\n3 para alterações cadastrais\n4 para finalizar\nSlecione uma opção: ");
 						op = sc.nextInt();
 						break;
 					case 2:
 						conta.setMensagem("\nOpção 2: %nOpção saque selecionada \n");
-						conta.setMensagem("Informe o valor do saque: ");
+						conta.setMensagem("Informe o valor do saque: R$ ");
 						conta.setSaque(sc.nextInt());
 						conta.setMensagem("\nSALDO ATUAL: R$ " + String.format("%.2f", conta.getSaldo()));
 						conta.setMensagem("\n\nE agora qual o proximo passo? \n");
 						conta.setMensagem("\nFINALIZAR ou realizar outra OPERAÇÂO? \n");
-						conta.setMensagem("\nDigite o numero da operação ou 4 para finalizar: ");
+						conta.setMensagem("\n1 para deposíto\n2 para saque\n3 para alterações cadastrais\n4 para finalizar\nSlecione uma opção: ");
 						op = sc.nextInt();
 						break;
 					case 3:
@@ -73,13 +75,15 @@ public class caixaEletronico {
 								sc.nextLine();
 								name = sc.nextLine();
 								conta.setName(name);
-								conta.getDadosConta();
+								System.out.println(conta);
 								conta.setMensagem("\nE agora qual o proximo passo? \n");
 								conta.setMensagem("\nFINALIZAR ou realizar outra OPERAÇÂO? \n");
-								conta.setMensagem("\nDigite o numero da operação ou 4 para finalizar: ");
+								conta.setMensagem("\n1 para deposíto\n2 para saque\n3 para alterações cadastrais\n4 para finalizar\nSlecione uma opção: ");
 								op = sc.nextInt();
 							}else {
 								conta.setMensagem("**** Acesso negado :( **** \n \n");
+								conta.setMensagem("Senha incorreta, digite novamente: ");
+								senha  = conta.verificaSenha(sc.nextInt());
 							}
 						break;
 					default:

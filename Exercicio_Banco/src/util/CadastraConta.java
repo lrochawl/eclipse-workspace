@@ -26,16 +26,20 @@ public class CadastraConta {
 		setMensagem("\n *************Seja bem-vindo ao Banco **************%n");
 		setMensagem("\nPrabéns "+getName()+" Foi confirmado a abertura da sua conta em nossa agência: %n");
 		setMensagem("****** Acabamos de gerar o número de sua conta **********%n");
-		getDadosConta();
-		setMensagem("\n\n**Informamos que todos os seus depositos são gratuitos e os saques é cobrado uma taxa de R$ 5,00 por saque combinado :) %n");
+		setMensagem("\n\n**Informamos que todos os seus depositos são gratuitos, para os saques é cobrado uma taxa de R$ 5,00 por saque combinado :) %n");
 	}
 	
-	public void getDadosConta() {
-		setMensagem("\n------------------------------");
-		setMensagem("\n AGÊNCIA: " + AG);
-		setMensagem("\n CONTA: " + String.format("%.0f", getContaNumber()));
-		setMensagem("\n SALDO ATUAL: R$ " + String.format("%.2f", getSaldo()));
-		setMensagem("\n------------------------------");
+	public String toString() {
+		
+		
+		return "\n------------------------------"
+				+ "\n AGÊNCIA: " 
+				+ AG
+				+ "\n CONTA: " 
+				+ String.format("%.0f", getContaNumber())
+				+ "\n SALDO ATUAL: R$ " 
+				+ String.format("%.2f", getSaldo())
+				+ "\n------------------------------";
 	}
 	
 	public void setMensagem(String msgUser) {
