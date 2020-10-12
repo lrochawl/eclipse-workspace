@@ -14,7 +14,7 @@ public class Program {
 		System.out.print("Quantas pessoas serão analisadas: ");
 		int n = sc.nextInt();
 		
-		double[] vect = new double [n];
+		double[] vect = new double[n];
 		
 		for(int i=0; i<n; i++) {
 			
