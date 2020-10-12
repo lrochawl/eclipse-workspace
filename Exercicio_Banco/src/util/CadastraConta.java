@@ -6,34 +6,34 @@ public class CadastraConta {
 	private int senha = 2002;
 	public static final int AG = 3189;
 
+
 	public CadastraConta(String name, double deposito) {
 		this.name = name;
 		setDeposito(deposito);
+		geraConta();
 	}
 
 	public CadastraConta(String name) {
 		this.name = name;
+		geraConta();
+		
 
 	}
 
-	public void setConfirma(String resposta) {
+	public void geraConta() {
 
-		if (resposta.equals("sim")) {
-			this.conta = (int) (1001 + Math.random() * 1000);
-			setMensagem("\nFoi confirmado a abertura da sua conta em nossa agência:    %n");
-			setMensagem("****** Acabamos de gerar o número de sua conta **********%n");
-			getDadosConta();
-			setMensagem("\n\n**Informamos que todos os seus depositos são gratuitos e os saques é cobrado uma taxa de R$ 5,00 por saque combinado :) %n");
-
-		} else {
-			setMensagem("Abertura da conta foi cancelada pelo usuário :( ");
-		}
+		this.conta = (int) (1001 + Math.random() * 1000);
+		setMensagem("\n *************Seja bem-vindo ao Banco **************%n");
+		setMensagem("\nPrabéns "+getName()+" Foi confirmado a abertura da sua conta em nossa agência: %n");
+		setMensagem("****** Acabamos de gerar o número de sua conta **********%n");
+		getDadosConta();
+		setMensagem("\n\n**Informamos que todos os seus depositos são gratuitos e os saques é cobrado uma taxa de R$ 5,00 por saque combinado :) %n");
 	}
 	
 	public void getDadosConta() {
 		setMensagem("\n------------------------------");
 		setMensagem("\n AGÊNCIA: " + AG);
-		setMensagem("\n CONTA: " + getContaNumber());
+		setMensagem("\n CONTA: " + String.format("%.0f", getContaNumber()));
 		setMensagem("\n SALDO ATUAL: R$ " + String.format("%.2f", getSaldo()));
 		setMensagem("\n------------------------------");
 	}

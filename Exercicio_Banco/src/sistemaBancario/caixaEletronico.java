@@ -20,10 +20,19 @@ public class caixaEletronico {
 		System.out.println();
 		System.out.printf("\nOlá %s deseja realizar agora seu deposito inicial? (sim/nao) ", name);
 		String confirma = sc.next().toLowerCase();
-		System.out.print("Qual será o valor do deposito? R$ ");
-		double deposito = sc.nextDouble();
-		CadastraConta conta = new CadastraConta(name, deposito);
-		conta.setConfirma(confirma);
+		CadastraConta conta ;
+		if(confirma.equals("sim")) {
+			System.out.print("\nQual será o valor do deposito? R$ ");
+			double deposito = sc.nextDouble();
+			conta = new CadastraConta(name, deposito);
+			
+		}else{
+			System.out.print("\nVocê optou por não realizar o deposito inicial neste momento");
+			System.out.print("\nAlguns serviços estarão indisponiveis até a realização do primeiro deposito");
+			conta = new CadastraConta(name);
+		}
+		
+	
 		conta.setMensagem("%n Deseja realizar nova operação? (sim/nao) ");
 		String opcao = sc.next();
 		
@@ -74,17 +83,16 @@ public class caixaEletronico {
 							}
 						break;
 					default:
-						conta.setMensagem("Operação finalizada pelo usuario");
+						conta.setMensagem("\n Operação finalizada pelo usuário");
 						break;
 				}
 		}
 		
-		}else {
-			
-			conta.setMensagem("xxxxxxxxx Opção invalida! xxxxxxxxxxx\n");
-			
 		}
+		
 		conta.setMensagem("Operação finalizada pelo usuario");
+		
+		
 		
 		System.out.println();
 		
