@@ -15,7 +15,7 @@ public class Program {
 		
 		Products[] vect = new Products[n];
 		
-		for(int i = 0; i<n; i++) {
+		for(int i = 0; i<vect.length; i++) {
 			System.out.printf("Nome do %dº produto: ", i + 1);
 			sc.nextLine();
 			String name = sc.nextLine();
@@ -27,14 +27,14 @@ public class Program {
 		
 		double soma = 0.0;
 		
-		for(int i=0; i<n; i++) {
+		for(int i=0; i<vect.length; i++) {
 			
 			soma += vect[i].getPrice();
 		}
 		
-		double precoMedio = soma / n;
+		double precoMedio = soma / vect.length;
 		
-		System.out.println("A média de preços é de: R$ " + precoMedio);
+		System.out.printf("A média de preços é de: R$ %.2f", precoMedio);
 		sc.close();
 		
 	}
