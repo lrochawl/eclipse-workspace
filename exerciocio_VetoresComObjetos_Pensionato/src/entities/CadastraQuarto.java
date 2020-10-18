@@ -5,10 +5,10 @@ public class CadastraQuarto {
 	private String name, email;
 	private int quarto;
 
-	public CadastraQuarto(String name, String email, int quarto ) {
+	public CadastraQuarto(String name, String email) {
 		this.name = name;
 		this.email = email;
-		this.quarto = quarto;
+		
 	}
 	
 	public String getName() {
@@ -17,8 +17,6 @@ public class CadastraQuarto {
 	public String getEmail() {
 		return this.email;
 	}
-	public int getQuarto() {
-		return this.quarto;
-	}
+	
 	
 }

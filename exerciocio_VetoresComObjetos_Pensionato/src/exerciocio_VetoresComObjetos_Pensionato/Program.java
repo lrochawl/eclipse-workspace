@@ -11,12 +11,13 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
+		
+		CadastraQuarto[] vect = new CadastraQuarto[10];
 		System.out.print("Opa, Quantos quartos serão ocupados? ");
 		int quartos = sc.nextInt();
 		
-		CadastraQuarto[] vect = new CadastraQuarto[quartos];
-		
-		for(int i=0; i<vect.length;i++) {
+		for(int i=0; i<quartos;i++) {
 			
 			System.out.printf("******** Cadastrando o %dº aluno *************%n", 1+i);
 			System.out.printf("NOME: ");
@@ -26,20 +27,26 @@ public class Program {
 			String email =  sc.nextLine();
 			System.out.printf("QUARTO: ");
 			int quarto = sc.nextInt();
-			if(quarto > 10) {
+			quarto -= 1;
+			while(quarto > 10 || vect[quarto] != null) {
 				System.out.printf("Desculpe temos apenas dez quartos diponiveis: %n");
 				System.out.printf("Escolha novamente o número do quarto: %n");
 				quarto = sc.nextInt();
 			}
-			vect[i] = new CadastraQuarto(name, email, quarto);
+			vect[quarto] = new CadastraQuarto(name, email);
 			
 		}
 		
 		for(int i=0; i<vect.length; i++) {
+			if(vect[i] != null) {
+			System.out.println("\n****** Dados dos alunos cadastrados **********\n");
 			System.out.printf("NOME: %s%n", vect[i].getName());
 			System.out.printf("E-MAIL: %s%n", vect[i].getEmail());
-			System.out.printf("QUARTO: %d%n", vect[i].getQuarto());
+			System.out.printf("QUARTO: %d%n", i+1);
+			}
 		}
+	
+	sc.close();
 	}
 
 }
