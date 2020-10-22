@@ -24,7 +24,9 @@ public class Program {
 			
 			vect[i] = new Products(name, price);
 		}
-		
+		if(vect[1].getName().equals("Lucas")) {
+			
+		}
 		double soma = 0.0;
 		
 		for(int i=0; i<vect.length; i++) {

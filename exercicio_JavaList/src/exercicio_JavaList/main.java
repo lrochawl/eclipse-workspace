@@ -10,6 +10,8 @@ public class main {
 		
 		List<String> alunos = new ArrayList<>();
 		
+		
+		
 		alunos.add("Patricia");
 		alunos.add("Crisnanda");
 		alunos.add("Eloane");
@@ -20,6 +22,10 @@ public class main {
 		alunos.add("Ana Gabriela");
 		alunos.add("Ingrid Daiane");
 		alunos.add("Lucas Rocha");
+		
+		
+		
+		System.out.println(alunos);
 		
 		System.out.println("Número de alunos " + alunos.size() + "\n");
 		int i = 0;
@@ -47,11 +53,6 @@ public class main {
 		System.out.println();
 		System.out.println("******************************************");
 		
-		List<String> result = alunos.stream().filter(aluno -> aluno.charAt(0) == 'A').collect(Collectores.toList);
-		for (String aluno : result) {
-			i++;
-			System.out.printf("Aluno %d: %s\n",i ,aluno);
-		}
 		
 		
 
