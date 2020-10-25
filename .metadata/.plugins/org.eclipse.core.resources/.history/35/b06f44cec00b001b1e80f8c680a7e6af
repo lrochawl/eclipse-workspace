@@ -1,6 +1,0 @@
-package schoolNotas;
-
-public class Media {
-	double nota1, nota2;
-	
-}
